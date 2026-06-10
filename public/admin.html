@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayla & Noah RSVP Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="admin-body">
+  <main class="admin-panel">
+    <h1>RSVP Admin</h1>
+    <p>Enter your admin key to view responses and download the CSV.</p>
+    <form id="adminForm" class="lookup-form">
+      <label for="adminKey">Admin key</label>
+      <div class="input-row">
+        <input id="adminKey" type="password" placeholder="Admin key" required />
+        <button class="button" type="submit">Load RSVPs</button>
+      </div>
+    </form>
+    <p id="adminMessage" class="form-message"></p>
+    <a id="downloadCsv" class="button primary hidden" href="#">Download CSV</a>
+    <div id="adminResults" class="admin-results"></div>
+  </main>
+  <script>
+    const form = document.getElementById('adminForm');
+    const results = document.getElementById('adminResults');
+    const message = document.getElementById('adminMessage');
+    const download = document.getElementById('downloadCsv');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const key = document.getElementById('adminKey').value.trim();
+      message.textContent = 'Loading...';
+      results.innerHTML = '';
+      download.classList.add('hidden');
+      try {
+        const response = await fetch(`/api/rsvps?adminKey=${encodeURIComponent(key)}`);
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || 'Could not load RSVPs.');
+        message.textContent = `${data.length} RSVP response${data.length === 1 ? '' : 's'} found.`;
+        download.href = `/api/rsvps/export?adminKey=${encodeURIComponent(key)}`;
+        download.classList.remove('hidden');
+        results.innerHTML = data.map((rsvp) => `
+          <article class="admin-card">
+            <h2>${escapeHtml(rsvp.invitationName)}</h2>
+            <p><strong>Status:</strong> ${escapeHtml(rsvp.attendanceStatus)}</p>
+            <p><strong>Contact:</strong> ${escapeHtml(rsvp.contactName)}${rsvp.email ? ` • ${escapeHtml(rsvp.email)}` : ''}${rsvp.phone ? ` • ${escapeHtml(rsvp.phone)}` : ''}</p>
+            <p><strong>Guests:</strong> ${(rsvp.responses || []).map((g) => `${escapeHtml(g.name)} (${g.attending ? 'Attending' : 'Not attending'}${g.firstCourse ? ', ' + escapeHtml(g.firstCourse) : ''}${g.mainCourse ? ', ' + escapeHtml(g.mainCourse) : ''})`).join(', ')}</p>
+            ${rsvp.dietaryRestrictions ? `<p><strong>Dietary:</strong> ${escapeHtml(rsvp.dietaryRestrictions)}</p>` : ''}
+            ${rsvp.songRequest ? `<p><strong>Song:</strong> ${escapeHtml(rsvp.songRequest)}</p>` : ''}
+            ${rsvp.message ? `<p><strong>Message:</strong> ${escapeHtml(rsvp.message)}</p>` : ''}
+            <p><small>${new Date(rsvp.submittedAt).toLocaleString()}</small></p>
+          </article>
+        `).join('');
+      } catch (error) {
+        message.textContent = error.message;
+      }
+    });
+
+    function escapeHtml(value = '') {
+      return String(value).replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#039;', '"': '&quot;' }[char]));
+    }
+  </script>
+</body>
+</html>

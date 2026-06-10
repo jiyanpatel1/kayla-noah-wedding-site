@@ -1,0 +1,22 @@
+[
+  {
+    "submittedAt": "2026-06-03T22:29:41.225Z",
+    "invitationId": "jiya-patel",
+    "invitationName": "Jiya Patel",
+    "contactName": "Jiya Patel",
+    "email": "",
+    "phone": "404-345-6415",
+    "attendanceStatus": "accepts",
+    "responses": [
+      {
+        "name": "Jiya Patel",
+        "attending": true,
+        "firstCourse": "Baby Gem Caesar Salad",
+        "mainCourse": "Pan Jus and Herb Roasted Chicken"
+      }
+    ],
+    "dietaryRestrictions": "",
+    "songRequest": "",
+    "message": ""
+  }
+]

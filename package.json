@@ -1,0 +1,16 @@
+{
+  "name": "kayla-noah-wedding-site",
+  "version": "1.0.0",
+  "description": "Wedding website with working RSVP backend for Kayla and Noah",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
