@@ -178,7 +178,7 @@ p { font-size: 16px; margin: 0; }
   display: block;
 }
 
-/* LANDING IMAGE - DESKTOP */
+/* DESKTOP LANDING IMAGE */
 .hero-bg {
   position: relative;
   z-index: 1;
@@ -187,28 +187,31 @@ p { font-size: 16px; margin: 0; }
   margin: 0;
   padding: 0;
 
-  background:
-    url('assets/landing.png')
-    center center / cover
-    no-repeat;
+  background-image: url('assets/landing.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 
   filter: grayscale(1) contrast(1.02) brightness(.86);
 }
 
-/* Keep this only if your HTML still uses hero-photo somewhere */
+/* Backup if your HTML still uses hero-photo */
 .hero-photo {
   position: relative;
   z-index: 1;
+  width: 100vw;
   min-height: calc(100vh - 70px);
-  width: 100%;
-  background:
-    url('assets/landing.png')
-    center center / cover
-    no-repeat;
+  margin: 0;
+  padding: 0;
+
+  background-image: url('assets/landing.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
   filter: grayscale(1) contrast(1.02) brightness(.86);
   border: 0;
   box-shadow: none;
-  margin: 0;
 }
 
 .hero-photo::after {
@@ -218,6 +221,7 @@ p { font-size: 16px; margin: 0; }
   border: 1px solid rgba(255,255,255,.18);
 }
 
+/* subtle overlay */
 .hero::before {
   content: '';
   position: absolute;
@@ -940,21 +944,19 @@ legend {
 @media (max-width: 980px) {
   .hero {
     min-height: calc(100svh - 70px);
+    padding: 0;
+    margin: 0;
+    background: #000;
   }
 
-  .hero-bg {
-    min-height: calc(100svh - 70px);
-    background-image: url('assets/landing.png');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-  }
-
+  .hero-bg,
   .hero-photo {
+    width: 100vw;
     min-height: calc(100svh - 70px);
-    background-image: url('assets/landing.png');
+
+    background-image: url('assets/landing-mobile.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center top;
     background-repeat: no-repeat;
   }
 
@@ -1003,7 +1005,7 @@ legend {
     padding: 18px;
     border: 1px solid var(--reverse-line);
   }
-  
+
   .nav-links.open {
     display: flex;
   }
@@ -1022,25 +1024,19 @@ legend {
     background: #000;
   }
 
-  .hero-bg {
+  .hero-bg,
+  .hero-photo {
     width: 100vw;
     min-height: calc(100svh - 70px);
 
-    background-image: url('assets/landing.png');
+    background-image: url('assets/landing-mobile.png');
     background-size: cover;
-
-    /* Move focus slightly left so Kayla/Noah stay visible on phone */
-    background-position: 38% center;
+    background-position: center top;
     background-repeat: no-repeat;
   }
 
-  .hero-photo {
-    min-height: calc(100svh - 70px);
-
-    background-image: url('assets/landing.png');
-    background-size: cover;
-    background-position: 38% center;
-    background-repeat: no-repeat;
+  .hero-photo::after {
+    inset: 10px;
   }
 
   .hero-panel {
