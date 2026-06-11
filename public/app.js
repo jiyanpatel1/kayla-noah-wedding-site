@@ -275,3 +275,16 @@ function escapeHtml(value = '') {
   return String(value).replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#039;', '"': '&quot;' }[char]));
 }
 function escapeAttribute(value = '') { return escapeHtml(value).replace(/`/g, '&#096;'); }
+
+// Make party grid items selectable with hover + click/keyboard
+document.querySelectorAll('.party-grid .person').forEach((el) => {
+  el.setAttribute('tabindex', '0');
+  el.setAttribute('role', 'button');
+  el.addEventListener('click', () => el.classList.toggle('selected'));
+  el.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      el.classList.toggle('selected');
+    }
+  });
+});
