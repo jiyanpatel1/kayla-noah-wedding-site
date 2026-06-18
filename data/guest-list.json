@@ -258,7 +258,7 @@
     "displayName": "Lennox Wallace & Guest",
     "guests": [
       "Lennox Wallace",
-      "Lennox's Plus One"
+      "Plus One"
     ]
   },
   {
@@ -346,15 +346,15 @@
     "displayName": "Hannah Johnson & Guest",
     "guests": [
       "Hannah Johnson",
-      "Hannah's Boyfriend"
+      "Plus One"
     ]
   },
   {
     "id": "jordan-wife",
-    "displayName": "Jordan & Wife",
+    "displayName": "Jordan Johnson& Katie",
     "guests": [
-      "Jordan",
-      "Jordan's Wife"
+      "Jordan Johnson",
+      "Katie"
     ]
   },
   {
