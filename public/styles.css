@@ -183,14 +183,14 @@ p { font-size: 16px; margin: 0; }
   position: relative;
   z-index: 1;
   width: 100vw;
+  height: calc(100vh - 70px);
   min-height: calc(100vh - 70px);
   margin: 0;
   padding: 0;
-  background-image: url('assets/landing.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  filter: grayscale(1) contrast(1.02) brightness(.86);
+  object-fit: cover;
+  background: #000;
+  display: block;
+  filter: none;
 }
 
 /* Backup if your HTML still uses hero-photo */
@@ -201,7 +201,7 @@ p { font-size: 16px; margin: 0; }
   min-height: calc(100vh - 70px);
   margin: 0;
   padding: 0;
-  background-image: url('assets/landing.png');
+  background-image: url('assets/landing.mp4');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1126,4 +1126,44 @@ legend {
     box-shadow: 0 14px 28px rgba(0,0,0,.18);
     z-index: 2;
   }
+  /* Landing hero video desktop + mobile */
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-video {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
+  object-fit: cover;
+  background: #000;
+  display: block;
+  filter: none;
+}
+
+.hero-video-mobile {
+  display: none;
+}
+
+.hero-video-desktop {
+  display: block;
+}
+
+@media (max-width: 640px) {
+  .hero-video-desktop {
+    display: none !important;
+  }
+
+  .hero-video-mobile {
+    display: block !important;
+    width: 100vw;
+    height: calc(100svh - 70px);
+    min-height: calc(100svh - 70px);
+    object-fit: cover;
+  }
+}
 }

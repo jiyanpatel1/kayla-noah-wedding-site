@@ -30,18 +30,38 @@
 
   <main>
     <section class="hero" id="home">
-      <div class="hero-bg reveal" aria-label="Hero background"></div>
-      <aside class="countdown-card reveal" aria-label="Wedding countdown">
-        <p class="micro">Live countdown</p>
-        <div class="countdown">
-          <div><strong id="days">—</strong><span>Days</span></div>
-          <div><strong id="hours">—</strong><span>Hours</span></div>
-          <div><strong id="minutes">—</strong><span>Minutes</span></div>
-          <div><strong id="seconds">—</strong><span>Seconds</span></div>
-        </div>
-      </aside>
-    </section>
+  <video
+  class="hero-bg hero-video hero-video-desktop reveal"
+  autoplay
+  muted
+  playsinline
+  preload="auto"
+  aria-label="Hero background desktop"
+>
+  <source src="assets/landing.mp4" type="video/mp4" />
+</video>
 
+<video
+  class="hero-bg hero-video hero-video-mobile reveal"
+  autoplay
+  muted
+  playsinline
+  preload="auto"
+  aria-label="Hero background mobile"
+>
+  <source src="assets/landingmobile.mp4" type="video/mp4" />
+</video>
+
+  <aside class="countdown-card reveal" aria-label="Wedding countdown">
+    <p class="micro">Live countdown</p>
+    <div class="countdown">
+      <div><strong id="days">—</strong><span>Days</span></div>
+      <div><strong id="hours">—</strong><span>Hours</span></div>
+      <div><strong id="minutes">—</strong><span>Minutes</span></div>
+      <div><strong id="seconds">—</strong><span>Seconds</span></div>
+    </div>
+  </aside>
+  </section>
     <section class="section invitation reveal">
       <div class="paper-card">
         <p class="micro">You are invited</p>
@@ -251,6 +271,6 @@
     <p>October 25, 2026 • Chateau Elan Winery & Resort</p>
   </footer>
 
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
