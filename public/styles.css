@@ -1232,4 +1232,22 @@ legend {
     min-height: calc(100svh - 70px);
   }
 }
+@media (max-width: 640px) {
+  .hero-video-desktop {
+    display: none !important;
+  }
+
+  .hero-video-mobile {
+    display: block !important;
+    position: relative;
+    z-index: 1;
+    width: 100vw;
+    height: calc(100svh - 70px);
+    min-height: calc(100svh - 70px);
+    object-fit: cover;
+    background: transparent;
+    filter: none !important;
+    opacity: 1 !important;
+  }
+}
 }
