@@ -1166,4 +1166,35 @@ legend {
     object-fit: cover;
   }
 }
+/* Click-to-open envelope video */
+.hero {
+  cursor: pointer;
+}
+
+.open-envelope-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
+  object-fit: cover;
+  background: #000;
+  z-index: 5;
+}
+
+.open-envelope-video.hidden {
+  display: none !important;
+}
+
+.countdown-card {
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 640px) {
+  .open-envelope-video {
+    height: calc(100svh - 70px);
+    min-height: calc(100svh - 70px);
+  }
+}
 }

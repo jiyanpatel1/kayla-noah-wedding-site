@@ -286,5 +286,24 @@ document.querySelectorAll('.party-grid .person').forEach((el) => {
       e.preventDefault();
       el.classList.toggle('selected');
     }
+    const heroSection = document.querySelector('.hero');
+const openEnvelopeVideoDesktop = document.getElementById('openEnvelopeVideoDesktop');
+const openEnvelopeVideoMobile = document.getElementById('openEnvelopeVideoMobile');
+
+if (heroSection && openEnvelopeVideoDesktop && openEnvelopeVideoMobile) {
+  heroSection.addEventListener('click', async () => {
+    const isMobile = window.matchMedia('(max-width: 640px)').matches;
+    const activeVideo = isMobile ? openEnvelopeVideoMobile : openEnvelopeVideoDesktop;
+
+    activeVideo.classList.remove('hidden');
+    activeVideo.currentTime = 0;
+
+    try {
+      await activeVideo.play();
+    } catch (error) {
+      console.error('Envelope video could not play:', error);
+    }
+  });
+}
   });
 });
