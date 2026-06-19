@@ -286,16 +286,16 @@ document.querySelectorAll('.party-grid .person').forEach((el) => {
       e.preventDefault();
       el.classList.toggle('selected');
     }
-  const heroSection = document.querySelector('.hero');
+ const envelopeClick = document.getElementById('envelopeClick');
 const openEnvelopeVideo = document.getElementById('openEnvelopeVideo');
 
-if (heroSection && openEnvelopeVideo) {
-  let openVideoPlaying = false;
+if (envelopeClick && openEnvelopeVideo) {
+  let isOpening = false;
 
-  heroSection.addEventListener('click', async () => {
-    if (openVideoPlaying) return;
+  envelopeClick.addEventListener('click', async () => {
+    if (isOpening) return;
 
-    openVideoPlaying = true;
+    isOpening = true;
     openEnvelopeVideo.classList.remove('hidden');
     openEnvelopeVideo.currentTime = 0;
 
@@ -304,7 +304,7 @@ if (heroSection && openEnvelopeVideo) {
     } catch (error) {
       console.error('Envelope opening video could not play:', error);
       openEnvelopeVideo.classList.add('hidden');
-      openVideoPlaying = false;
+      isOpening = false;
     }
   });
 
@@ -312,7 +312,7 @@ if (heroSection && openEnvelopeVideo) {
     openEnvelopeVideo.pause();
     openEnvelopeVideo.currentTime = 0;
     openEnvelopeVideo.classList.add('hidden');
-    openVideoPlaying = false;
+    isOpening = false;
   });
 }
   });

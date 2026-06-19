@@ -1168,30 +1168,65 @@ legend {
 }
 .hero {
   position: relative;
-  cursor: pointer;
+  overflow: hidden;
+  background: #000;
 }
 
-.hero-bg,
 .hero-video {
-  pointer-events: none;
-}
-
-.open-envelope-video {
-  position: absolute;
-  inset: 0;
   width: 100vw;
   height: calc(100vh - 70px);
   min-height: calc(100vh - 70px);
   object-fit: cover;
   background: #000;
-  z-index: 99;
+  display: block;
+  filter: none;
+  pointer-events: none;
+}
+
+.hero-video-mobile {
+  display: none;
+}
+
+.envelope-click {
+  position: absolute;
+  inset: 0;
+  z-index: 8;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+
+.open-envelope-video {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  width: 100vw;
+  height: calc(100vh - 70px);
+  min-height: calc(100vh - 70px);
+  object-fit: cover;
+  background: #000;
 }
 
 .open-envelope-video.hidden {
   display: none !important;
 }
 
+.countdown-card {
+  position: relative;
+  z-index: 30;
+}
+
 @media (max-width: 640px) {
+  .hero-video-desktop {
+    display: none !important;
+  }
+
+  .hero-video-mobile {
+    display: block !important;
+    height: calc(100svh - 70px);
+    min-height: calc(100svh - 70px);
+  }
+
   .open-envelope-video {
     height: calc(100svh - 70px);
     min-height: calc(100svh - 70px);
