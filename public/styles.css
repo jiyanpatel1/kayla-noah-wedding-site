@@ -1166,29 +1166,29 @@ legend {
     object-fit: cover;
   }
 }
-/* Click-to-open envelope video */
 .hero {
+  position: relative;
   cursor: pointer;
+}
+
+.hero-bg,
+.hero-video {
+  pointer-events: none;
 }
 
 .open-envelope-video {
   position: absolute;
   inset: 0;
-  width: 100%;
+  width: 100vw;
   height: calc(100vh - 70px);
   min-height: calc(100vh - 70px);
   object-fit: cover;
   background: #000;
-  z-index: 5;
+  z-index: 99;
 }
 
 .open-envelope-video.hidden {
   display: none !important;
-}
-
-.countdown-card {
-  position: relative;
-  z-index: 10;
 }
 
 @media (max-width: 640px) {
