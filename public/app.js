@@ -250,6 +250,14 @@ rsvpForm.addEventListener('submit', async (event) => {
     });
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || 'Could not save RSVP.');
+    await fetch("https://script.google.com/macros/s/AKfycbzebZQbvDaoNFL__n7XbLBGueWclt77Ra5zEhdkGiflY6F8H49LsmjGRqvj20XZB_vm/exec", {
+  method: "POST",
+  mode: "no-cors",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify(payload)
+});
     rsvpForm.classList.add('hidden');
 matchResults.innerHTML = '';
 
@@ -275,7 +283,7 @@ submitMessage.textContent = '';
 document.getElementById('doneConfirmation').addEventListener('click', () => {
   rsvpForm.reset();
   confirmationCard.classList.add('hidden');
-  confirmationCard.innerHTML = '';
+confirmationCard.innerHTML = '';
   selectedInvitation = null;
 });
   } catch (error) {
