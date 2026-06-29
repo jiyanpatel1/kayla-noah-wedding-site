@@ -18,5 +18,25 @@
     "dietaryRestrictions": "",
     "songRequest": "",
     "message": ""
+  },
+  {
+    "submittedAt": "2026-06-29T20:46:46.707Z",
+    "invitationId": "jiya-patel-hemant-gautam",
+    "invitationName": "Jiya Patel & Hemant Gautam",
+    "contactName": "Jiya Patel & Hemant Gautam",
+    "email": "",
+    "phone": "",
+    "attendanceStatus": "accepts",
+    "responses": [
+      {
+        "name": "Jiya Patel",
+        "attending": true,
+        "firstCourse": "Baby Gem Caesar Salad",
+        "mainCourse": "Grilled Rib-eye"
+      }
+    ],
+    "dietaryRestrictions": "",
+    "songRequest": "",
+    "message": ""
   }
 ]

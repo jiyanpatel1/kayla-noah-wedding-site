@@ -1250,4 +1250,42 @@ legend {
     opacity: 1 !important;
   }
 }
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-bg,
+.hero-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video-desktop {
+  display: block;
+}
+
+.hero-video-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-video-desktop {
+    display: none !important;
+  }
+
+  .hero-video-mobile {
+    display: block !important;
+  }
+}
 }

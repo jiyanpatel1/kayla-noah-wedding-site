@@ -250,10 +250,30 @@ rsvpForm.addEventListener('submit', async (event) => {
     });
     const data = await response.json();
     if (!response.ok) throw new Error(data.error || 'Could not save RSVP.');
-    showMessage(submitMessage, 'Thank you! Your RSVP has been saved.', 'success');
-    rsvpForm.reset();
     rsvpForm.classList.add('hidden');
-    matchResults.innerHTML = '';
+matchResults.innerHTML = '';
+
+submitMessage.innerHTML = `
+  <div class="confirmation-card">
+    <h2>🎉 Thank You!</h2>
+    <p>Your RSVP has been received.</p>
+
+    <p>✔ RSVP Saved</p>
+    <p>✔ Dinner Selections Saved</p>
+
+    <h3>Reminder: Black Tie Attire Required</h3>
+    <p>Please wear formal black-tie attire. We can't wait to celebrate with you on October 25, 2026!</p>
+
+    <button type="button" class="button primary" id="doneConfirmation">Done</button>
+  </div>
+`;
+submitMessage.className = 'form-message success';
+
+document.getElementById('doneConfirmation').addEventListener('click', () => {
+  rsvpForm.reset();
+  submitMessage.innerHTML = '';
+  selectedInvitation = null;
+});
   } catch (error) {
     showMessage(submitMessage, error.message, 'error');
   }
