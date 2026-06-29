@@ -3,7 +3,14 @@ const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 const lookupForm = document.getElementById('lookupForm');
 const lookupMessage = document.getElementById('lookupMessage');
-const matchResults = document.getElementById('matchResults');
+let matchResults = document.getElementById('matchResults');
+
+if (!matchResults && lookupForm) {
+  matchResults = document.createElement('div');
+  matchResults.id = 'matchResults';
+  matchResults.className = 'match-results';
+  lookupForm.insertAdjacentElement('afterend', matchResults);
+}
 const rsvpForm = document.getElementById('rsvpForm');
 const invitationIdInput = document.getElementById('invitationId');
 const invitationTitle = document.getElementById('invitationTitle');
@@ -306,13 +313,21 @@ function escapeAttribute(value = '') { return escapeHtml(value).replace(/`/g, '&
 document.querySelectorAll('.party-grid .person').forEach((el) => {
   el.setAttribute('tabindex', '0');
   el.setAttribute('role', 'button');
-  el.addEventListener('click', () => el.classList.toggle('selected'));
+
+  el.addEventListener('click', () => {
+    el.classList.toggle('selected');
+  });
+
   el.addEventListener('keydown', (e) => {
     if (e.key === 'Enter' || e.key === ' ') {
       e.preventDefault();
       el.classList.toggle('selected');
     }
- const envelopeClick = document.getElementById('envelopeClick');
+  });
+});
+
+// Envelope opening video
+const envelopeClick = document.getElementById('envelopeClick');
 const openEnvelopeVideo = document.getElementById('openEnvelopeVideo');
 
 if (envelopeClick && openEnvelopeVideo) {
@@ -341,5 +356,5 @@ if (envelopeClick && openEnvelopeVideo) {
     isOpening = false;
   });
 }
-  });
-});
+
+
