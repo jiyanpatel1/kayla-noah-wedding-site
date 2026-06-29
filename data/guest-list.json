@@ -2,367 +2,237 @@
   {
     "id": "abby-johnson-eric-lenning",
     "displayName": "Abby Johnson & Eric Lenning",
-    "guests": [
-      "Abby Johnson",
-      "Eric Lenning"
-    ]
+    "guests": ["Abby Johnson", "Eric Lenning"]
   },
   {
     "id": "jamie-nate-evan-cole",
     "displayName": "Jamie, Nate & Evan Cole",
-    "guests": [
-      "Jamie Cole",
-      "Nate Cole",
-      "Evan Cole"
-    ]
+    "guests": ["Jamie Cole", "Nate Cole", "Evan Cole"]
   },
   {
-    "id": "michael-amberlyn-johnson",
-    "displayName": "Michael & Amberlyn Johnson",
-    "guests": [
-      "Michael Johnson",
-      "Amberlyn Johnson"
-    ]
+    "id": "michael-amberlyn-payton",
+    "displayName": "Michael, Amberlyn & Payton",
+    "guests": ["Michael Johnson", "Amberlyn Johnson", "Payton Jackson"]
   },
   {
-    "id": "spencer-mcdonald-riley-spraldin",
+    "id": "spencer-riley",
     "displayName": "Spencer McDonald & Riley Spraldin",
-    "guests": [
-      "Spencer McDonald",
-      "Riley Spraldin"
-    ]
+    "guests": ["Spencer McDonald", "Riley Spraldin"]
   },
   {
-    "id": "caleb-amber-heidi-boutwell",
+    "id": "caleb-amber-heidi",
     "displayName": "Caleb, Amber & Heidi Boutwell",
-    "guests": [
-      "Caleb Boutwell",
-      "Amber Boutwell",
-      "Heidi Boutwell"
-    ]
+    "guests": ["Caleb Boutwell", "Amber Boutwell", "Heidi Boutwell"]
   },
   {
-    "id": "zach-renee-james-cade",
-    "displayName": "Zach, Renee, James & Cade",
-    "guests": [
-      "Zach Worley",
-      "Renee Merino",
-      "James Swilley",
-      "Cade Worley"
-    ]
+    "id": "zach-cade-renee-james",
+    "displayName": "Zach, Cade, Renee & James",
+    "guests": ["Zach Worley", "Cade Worley", "Renee Merino", "James Swilley"]
   },
   {
-    "id": "rosie-gilmore-allison-hinton",
-    "displayName": "Rosie Gilmore & Allison Hinton",
-    "guests": [
-      "Rosie Gilmore",
-      "Allison Hinton"
-    ]
+    "id": "rosie-gilmore",
+    "displayName": "Rosie Gilmore",
+    "guests": ["Rosie Gilmore"]
+  },
+  {
+    "id": "allison-hinton",
+    "displayName": "Allison Hinton",
+    "guests": ["Allison Hinton"]
   },
   {
     "id": "mia-cocanig",
     "displayName": "Mia Cocanig",
-    "guests": [
-      "Mia Cocanig"
-    ]
+    "guests": ["Mia Cocanig"]
   },
   {
     "id": "bre-andrew-prutzman",
     "displayName": "Bre & Andrew Prutzman",
-    "guests": [
-      "Bre Prutzman",
-      "Andrew Prutzman"
-    ]
+    "guests": ["Bre Prutzman", "Andrew Prutzman"]
   },
   {
-    "id": "jiya-patel-hermant",
-    "displayName": "Jiya Patel & Hemant",
-    "guests": [
-      "Jiya Patel",
-      "Hemant"
-    ]
+    "id": "jiya-patel-hemant-gautam",
+    "displayName": "Jiya Patel & Hemant Gautam",
+    "guests": ["Jiya Patel", "Hemant Gautam"]
   },
   {
     "id": "chase-mcdonald",
     "displayName": "Chase McDonald",
-    "guests": [
-      "Chase McDonald"
-    ]
+    "guests": ["Chase McDonald"]
   },
   {
-    "id": "ryan-ross-carly",
-    "displayName": "Ryan Ross & Carly",
-    "guests": [
-      "Ryan Ross",
-      "Carly"
-    ]
+    "id": "ryan-karli-ross",
+    "displayName": "Ryan & Karli Ross",
+    "guests": ["Ryan Ross", "Karli Ross"]
   },
   {
     "id": "cole-anita-bostwick",
     "displayName": "Cole & Anita Bostwick",
-    "guests": [
-      "Cole Bostwick",
-      "Anita Bostwick"
-    ]
+    "guests": ["Cole Bostwick", "Anita Bostwick"]
   },
   {
     "id": "sally-bostwick",
     "displayName": "Sally Bostwick",
-    "guests": [
-      "Sally Bostwick"
-    ]
+    "guests": ["Sally Bostwick"]
   },
   {
-    "id": "meredith-reed-finley",
-    "displayName": "Meredith, Reed & Finley",
-    "guests": [
-      "Meredith Brown",
-      "Reed Heath",
-      "Finley Heath"
-    ]
+    "id": "meredith-finley-reed",
+    "displayName": "Meredith, Finley & Reed",
+    "guests": ["Meredith Brown", "Finley Heath", "Reed Heath"]
   },
   {
     "id": "lorie-nick-colin",
     "displayName": "Lorie, Nick & Colin",
-    "guests": [
-      "Lorie Sanders",
-      "Nick Maturo",
-      "Colin Aucutt"
-    ]
+    "guests": ["Lorie Sanders", "Nick Maturo", "Colin Aucutt"]
   },
   {
     "id": "brennan-aucutt",
     "displayName": "Brennan Aucutt",
-    "guests": [
-      "Brennan Aucutt"
-    ]
+    "guests": ["Brennan Aucutt"]
   },
   {
     "id": "jakob-abby-cocanig",
     "displayName": "Jakob & Abby Cocanig",
-    "guests": [
-      "Jakob Cocanig",
-      "Abby Cocanig"
-    ]
+    "guests": ["Jakob Cocanig", "Abby Cocanig"]
   },
   {
     "id": "mark-sanders",
     "displayName": "Mark Sanders",
-    "guests": [
-      "Mark Sanders"
-    ]
+    "guests": ["Mark Sanders"]
   },
   {
     "id": "jennifer-allen",
     "displayName": "Jennifer Allen",
-    "guests": [
-      "Jennifer Allen"
-    ]
+    "guests": ["Jennifer Allen"]
   },
   {
-    "id": "sydney-sanders-jacqueline-dallas",
-    "displayName": "Sydney Sanders & Jacqueline Dallas",
-    "guests": [
-      "Sydney Sanders",
-      "Jacqueline Dallas"
-    ]
+    "id": "jacqueline-sydney",
+    "displayName": "Jacqueline Dallas & Sydney Sanders",
+    "guests": ["Jacqueline Dallas", "Sydney Sanders"]
   },
   {
     "id": "edward-lopez",
     "displayName": "Edward Lopez",
-    "guests": [
-      "Edward Lopez"
-    ]
+    "guests": ["Edward Lopez"]
   },
   {
-    "id": "eddie-kat-enzo-lopez",
+    "id": "eddie-kat-enzo",
     "displayName": "Eddie, Kat & Enzo Lopez",
+    "guests": ["Eddie Lopez", "Kat Lopez", "Enzo Lopez"]
+  },
+  {
+    "id": "eddie-kim",
+    "displayName": "Eddie & Kim Johnson",
+    "guests": ["Eddie Johnson", "Kim Johnson"]
+  },
+  {
+    "id": "betty-daryl",
+    "displayName": "Betty & Daryl Anderson",
+    "guests": ["Betty Anderson", "Daryl Anderson"]
+  },
+  {
+    "id": "leonard-family",
+    "displayName": "Leonard & Heather Johnson Family",
     "guests": [
-      "Eddie Lopez",
-      "Kat Lopez",
-      "Enzo Lopez"
+      "Leonard Johnson",
+      "Heather Johnson",
+      "Lennox Wallace",
+      "Lennox Plus One",
+      "Aiden Johnson"
     ]
   },
   {
-    "id": "lisa-ryan-hall",
+    "id": "hannah-plus-one",
+    "displayName": "Hannah Johnson & Guest",
+    "guests": ["Hannah Johnson", "Hannah Plus One"]
+  },
+  {
+    "id": "katie-jordan",
+    "displayName": "Katie & Jordan Johnson",
+    "guests": ["Katie Johnson", "Jordan Johnson"]
+  },
+  {
+    "id": "billy-connie",
+    "displayName": "Billy & Connie Hendrix",
+    "guests": ["Billy Hendrix", "Connie Hendrix"]
+  },
+  {
+    "id": "lisa-ryan",
     "displayName": "Lisa & Ryan Hall",
-    "guests": [
-      "Lisa Hall",
-      "Ryan Hall"
-    ]
+    "guests": ["Lisa Hall", "Ryan Hall"]
   },
   {
-    "id": "melissa-mario-spinella",
+    "id": "melissa-mario",
     "displayName": "Melissa & Mario Spinella",
-    "guests": [
-      "Melissa Spinella",
-      "Mario Spinella"
-    ]
+    "guests": ["Melissa Spinella", "Mario Spinella"]
+  },
+  {
+    "id": "tammy-keith",
+    "displayName": "Tammy & Keith McCullar",
+    "guests": ["Tammy McCullar", "Keith McCullar"]
   },
   {
     "id": "dan-smith",
     "displayName": "Dan Smith",
-    "guests": [
-      "Dan Smith"
-    ]
+    "guests": ["Dan Smith"]
   },
   {
     "id": "susan-smith",
     "displayName": "Susan Smith",
-    "guests": [
-      "Susan Smith"
-    ]
+    "guests": ["Susan Smith"]
   },
   {
-    "id": "keith-tammy-mccullar",
-    "displayName": "Keith & Tammy McCullar",
-    "guests": [
-      "Keith McCullar",
-      "Tammy McCullar"
-    ]
+    "id": "mckinley-amy-michael",
+    "displayName": "McKinley, Amy & Michael Ogle",
+    "guests": ["McKinley Ogle", "Amy Ogle", "Michael Ogle"]
   },
   {
-    "id": "mckinley-ogle",
-    "displayName": "McKinley Ogle",
-    "guests": [
-      "McKinley Ogle"
-    ]
+    "id": "anna-gary",
+    "displayName": "Anna & Gary Shadden",
+    "guests": ["Anna Shadden", "Gary Shadden"]
   },
   {
-    "id": "amy-michael-ogle",
-    "displayName": "Amy & Michael Ogle",
-    "guests": [
-      "Amy Ogle",
-      "Michael Ogle"
-    ]
+    "id": "brock-ashley-joshua",
+    "displayName": "Brock, Ashley & Joshua",
+    "guests": ["Brock Mullinax", "Ashley Mullinax", "Joshua Hensley"]
   },
   {
-    "id": "betty-daryl-anderson",
-    "displayName": "Betty & Daryl Anderson",
-    "guests": [
-      "Betty Anderson",
-      "Daryl Anderson"
-    ]
+    "id": "amber-harbin",
+    "displayName": "Amber Hubbard Harbin",
+    "guests": ["Amber Hubbard Harbin"]
   },
   {
-    "id": "leonard-heather-aidan-johnson",
-    "displayName": "Leonard, Heather & Aidan Johnson",
-    "guests": [
-      "Leonard Johnson",
-      "Heather Johnson",
-      "Aidan Johnson"
-    ]
+    "id": "tiffany-till",
+    "displayName": "Tiffany Till",
+    "guests": ["Tiffany Till"]
   },
   {
-    "id": "lennox-wallace-plus-one",
-    "displayName": "Lennox Wallace & Guest",
-    "guests": [
-      "Lennox Wallace",
-      "Plus One"
-    ]
-  },
-  {
-    "id": "kim-eddie-johnson",
-    "displayName": "Kim & Eddie Johnson",
-    "guests": [
-      "Kim Johnson",
-      "Eddie Johnson"
-    ]
-  },
-  {
-    "id": "brock-mullinax",
-    "displayName": "Brock Mullinax",
-    "guests": [
-      "Brock Mullinax"
-    ]
-  },
-  {
-    "id": "ashley-mullinax-josh-hensley",
-    "displayName": "Ashley Mullinax & Josh Hensley",
-    "guests": [
-      "Ashley Mullinax",
-      "Josh Hensley"
-    ]
-  },
-  {
-    "id": "billie-connie-hendrix",
-    "displayName": "Billie & Connie Hendrix",
-    "guests": [
-      "Billie Hendrix",
-      "Connie Hendrix"
-    ]
-  },
-  {
-    "id": "stormy-garrett-manley",
+    "id": "stormy-garrett",
     "displayName": "Stormy & Garrett Manley",
-    "guests": [
-      "Stormy Manley",
-      "Garrett Manley"
-    ]
+    "guests": ["Stormy Manley", "Garrett Manley"]
   },
   {
-    "id": "hailey-jared-lyon",
-    "displayName": "Hailey & Jared Lyon",
-    "guests": [
-      "Hailey Lyon",
-      "Jared Lyon"
-    ]
-  },
-  {
-    "id": "tatum-dawson-clay",
+    "id": "tatum-dawson",
     "displayName": "Tatum & Dawson Clay",
-    "guests": [
-      "Tatum Clay",
-      "Dawson Clay"
-    ]
+    "guests": ["Tatum Clay", "Dawson Clay"]
   },
   {
-    "id": "dusty-toffany-mcculley",
-    "displayName": "Dusty & Toffany McCulley",
-    "guests": [
-      "Dusty McCulley",
-      "Toffany McCulley"
-    ]
+    "id": "haley-jared",
+    "displayName": "Haley & Jared Lyon",
+    "guests": ["Haley Lyon", "Jared Lyon"]
   },
   {
-    "id": "logan-hughes-wife",
-    "displayName": "Mr. and Mrs. Hughes",
-    "guests": [
-      "Logan Hughes",
-      "Mrs. Hughes"
-    ]
+    "id": "dusty-tiffany",
+    "displayName": "Dusty & Tiffany McCulley",
+    "guests": ["Dusty McCulley", "Tiffany McCulley"]
   },
   {
-    "id": "savannah-gracie-owen-cole",
-    "displayName": "Savannah, Gracie & Owen Cole",
-    "guests": [
-      "Savannah Cole",
-      "Gracie Cole",
-      "Owen Cole"
-    ]
+    "id": "logan-madison",
+    "displayName": "Logan & Madison Hughes",
+    "guests": ["Logan Hughes", "Madison Hughes"]
   },
   {
-    "id": "hannah-johnson-boyfriend",
-    "displayName": "Hannah Johnson & Guest",
-    "guests": [
-      "Hannah Johnson",
-      "Plus One"
-    ]
-  },
-  {
-    "id": "jordan-wife",
-    "displayName": "Jordan Johnson& Katie",
-    "guests": [
-      "Jordan Johnson",
-      "Katie"
-    ]
-  },
-  {
-    "id": "anna-gary-shaddan",
-    "displayName": "Anna & Gary Shaddan",
-    "guests": [
-      "Anna Shaddan",
-      "Gary Shaddan"
-    ]
+    "id": "savannah-grace-owen",
+    "displayName": "Savannah, Grace & Owen Cole",
+    "guests": ["Savannah Cole", "Grace Cole", "Owen Cole"]
   }
 ]
