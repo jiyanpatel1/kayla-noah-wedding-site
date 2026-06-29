@@ -253,7 +253,10 @@ rsvpForm.addEventListener('submit', async (event) => {
     rsvpForm.classList.add('hidden');
 matchResults.innerHTML = '';
 
-submitMessage.innerHTML = `
+const confirmationCard = document.getElementById('confirmationCard');
+confirmationCard.classList.remove('hidden');
+
+confirmationCard.innerHTML = `
   <div class="confirmation-card">
     <h2>🎉 Thank You!</h2>
     <p>Your RSVP has been received.</p>
@@ -267,11 +270,12 @@ submitMessage.innerHTML = `
     <button type="button" class="button primary" id="doneConfirmation">Done</button>
   </div>
 `;
-submitMessage.className = 'form-message success';
+submitMessage.textContent = '';
 
 document.getElementById('doneConfirmation').addEventListener('click', () => {
   rsvpForm.reset();
-  submitMessage.innerHTML = '';
+  confirmationCard.classList.add('hidden');
+  confirmationCard.innerHTML = '';
   selectedInvitation = null;
 });
   } catch (error) {
