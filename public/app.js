@@ -87,8 +87,9 @@ lookupForm.addEventListener('submit', async (event) => {
     if (!response.ok) throw new Error(data.error || 'Could not search the guest list.');
     renderMatches(data.matches || []);
   } catch (error) {
-    showMessage(lookupMessage, 'RSVP server is not running. Start it with npm install, then npm start.', 'error');
-  }
+  console.error('Guest lookup error:', error);
+  showMessage(lookupMessage, error.message || 'Could not search guest list.', 'error');
+}
 });
 
 function renderMatches(matches) {
