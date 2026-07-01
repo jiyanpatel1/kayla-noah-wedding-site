@@ -6,6 +6,9 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const ADMIN_KEY = process.env.ADMIN_KEY || 'kayla-noah-2026';
 
+const GOOGLE_SHEETS_WEBHOOK =
+  'https://script.google.com/macros/s/AKfycbxPx9O4VaeC1BGji1HqPIwb2zBk1Zax2SCEAdo1bK8maCnOXd93TvtzLmX3xfvzVM1X/exec';
+
 const DATA_DIR = path.join(__dirname, 'data');
 const GUESTS_FILE = path.join(DATA_DIR, 'guest-list.json');
 const RSVPS_FILE = path.join(DATA_DIR, 'rsvps.json');
@@ -15,22 +18,13 @@ app.use(express.json({ limit: '1mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 function ensureFiles() {
-  if (!fs.existsSync(DATA_DIR)) {
-    fs.mkdirSync(DATA_DIR, { recursive: true });
-  }
-
-  if (!fs.existsSync(GUESTS_FILE)) {
-    fs.writeFileSync(GUESTS_FILE, '[]');
-  }
-
-  if (!fs.existsSync(RSVPS_FILE)) {
-    fs.writeFileSync(RSVPS_FILE, '[]');
-  }
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+  if (!fs.existsSync(GUESTS_FILE)) fs.writeFileSync(GUESTS_FILE, '[]');
+  if (!fs.existsSync(RSVPS_FILE)) fs.writeFileSync(RSVPS_FILE, '[]');
 }
 
 function readJson(filePath, fallback) {
   ensureFiles();
-
   try {
     return JSON.parse(fs.readFileSync(filePath, 'utf8'));
   } catch (err) {
@@ -103,6 +97,31 @@ function writeCsv(rsvps) {
   fs.writeFileSync(RSVPS_CSV, rows.join('\n'));
 }
 
+async function sendToGoogleSheets(submission) {
+  try {
+    for (const guest of submission.responses) {
+      await fetch(GOOGLE_SHEETS_WEBHOOK, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          invitationId: submission.invitationId,
+          guestName: guest.name,
+          attending: guest.attending,
+          firstCourse: guest.firstCourse,
+          mainCourse: guest.mainCourse,
+          dietaryRestrictions: submission.dietaryRestrictions,
+          songRequest: submission.songRequest,
+          message: submission.message
+        })
+      });
+    }
+
+    console.log('RSVP backed up to Google Sheets.');
+  } catch (error) {
+    console.error('Google Sheets backup failed:', error);
+  }
+}
+
 app.post('/api/find-guest', (req, res) => {
   const query = normalize(req.body?.name);
 
@@ -129,7 +148,7 @@ app.post('/api/find-guest', (req, res) => {
   res.json({ matches });
 });
 
-app.post('/api/rsvp', (req, res) => {
+app.post('/api/rsvp', async (req, res) => {
   const body = req.body || {};
 
   const invitationId = String(body.invitationId || '').trim();
@@ -177,10 +196,13 @@ app.post('/api/rsvp', (req, res) => {
 
   if (
     attendanceStatus === 'accepts' &&
-    cleanResponses.some((response) => !response.firstCourse || !response.mainCourse)
+    cleanResponses.some(
+      (response) => !response.firstCourse || !response.mainCourse
+    )
   ) {
     return res.status(400).json({
-      error: 'Please choose a first course and main course for each attending guest.'
+      error:
+        'Please choose a first course and main course for each attending guest.'
     });
   }
 
@@ -220,6 +242,8 @@ app.post('/api/rsvp', (req, res) => {
 
   writeJson(RSVPS_FILE, rsvps);
   writeCsv(rsvps);
+
+  await sendToGoogleSheets(submission);
 
   res.json({
     ok: true,
