@@ -285,7 +285,7 @@ confirmationCard.innerHTML = `
     <hr>
 
     <h3>Before the Big Day</h3>
-    <p>📅 <strong>Wedding Date:</strong> October 17, 2026</p>
+    <p>📅 <strong>Wedding Date:</strong> October 25, 2026</p>
     <p>🕓 <strong>Ceremony Begins:</strong> 4:30 PM</p>
     <p>📍 <strong>Venue:</strong> Chateau Elan Winery & Resort</p>
     <p>🤵 <strong>Dress Code:</strong> Black Attire Rquired</p>
