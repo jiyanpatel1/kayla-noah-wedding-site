@@ -267,14 +267,29 @@ confirmationCard.classList.remove('hidden');
 
 confirmationCard.innerHTML = `
   <div class="confirmation-card">
-    <h2>🎉 Thank You!</h2>
-    <p>Your RSVP has been received.</p>
+    <p class="script">With gratitude</p>
+    <h2>Your RSVP Has Been Received</h2>
 
-    <p>✔ RSVP Saved</p>
-    <p>✔ Dinner Selections Saved</p>
+    <p>Thank you, ${escapeHtml(payload.contactName || selectedInvitation.displayName)}.</p>
+    <p>
+      We're so excited to celebrate with you at <strong>Chateau Elan Winery & Resort</strong>.
+      Your RSVP has been successfully received.
+    </p>
 
-    <h3>Reminder: Black Tie Attire Required</h3>
-    <p>Please wear formal black-tie attire. We can't wait to celebrate with you on October 25, 2026!</p>
+    <hr>
+
+    <h3>RSVP Summary</h3>
+    <p><strong>Status:</strong> ${status === 'accepts' ? 'Joyfully Accepted' : 'Regretfully Declined'}</p>
+    <p><strong>Guests:</strong> ${responses.map(g => escapeHtml(g.name)).join(', ')}</p>
+
+    <hr>
+
+    <h3>Before the Big Day</h3>
+    <p>📅 <strong>Wedding Date:</strong> October 17, 2026</p>
+    <p>🕓 <strong>Ceremony Begins:</strong> 4:30 PM</p>
+    <p>📍 <strong>Venue:</strong> Chateau Elan Winery & Resort</p>
+    <p>🤵 <strong>Dress Code:</strong> Black Attire Rquired</p>
+    <p>❓ <strong>Need to make changes?</strong> You may return before the RSVP deadline to update your response.</p>
 
     <button type="button" class="button primary" id="doneConfirmation">Done</button>
   </div>

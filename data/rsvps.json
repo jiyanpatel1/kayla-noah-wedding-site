@@ -20,19 +20,25 @@
     "message": ""
   },
   {
-    "submittedAt": "2026-06-29T20:46:46.707Z",
+    "submittedAt": "2026-07-01T16:14:28.372Z",
     "invitationId": "jiya-patel-hemant-gautam",
     "invitationName": "Jiya Patel & Hemant Gautam",
     "contactName": "Jiya Patel & Hemant Gautam",
     "email": "",
     "phone": "",
-    "attendanceStatus": "accepts",
+    "attendanceStatus": "declines",
     "responses": [
       {
         "name": "Jiya Patel",
-        "attending": true,
-        "firstCourse": "Baby Gem Caesar Salad",
-        "mainCourse": "Grilled Rib-eye"
+        "attending": false,
+        "firstCourse": "",
+        "mainCourse": ""
+      },
+      {
+        "name": "Hemant Gautam",
+        "attending": false,
+        "firstCourse": "",
+        "mainCourse": ""
       }
     ],
     "dietaryRestrictions": "",
